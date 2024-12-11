@@ -27,22 +27,20 @@
             text-align: center;
             padding: 3rem 1rem;
             border-bottom: 5px solid #003a6f;
-            position: relative;
-            overflow: hidden;
         }
 
         header h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            animation: slideIn 1s ease-out;
+            animation: fadeInDown 1s ease-out;
         }
 
         header p {
             font-size: 1.3rem;
             opacity: 0.9;
             margin-bottom: 1rem;
-            animation: fadeIn 2s ease-in;
+            animation: fadeIn 1.5s ease-in;
         }
 
         header .quote {
@@ -50,7 +48,7 @@
             font-style: italic;
             font-size: 1.2rem;
             opacity: 0.8;
-            animation: fadeIn 2.5s ease-in;
+            animation: fadeIn 2s ease-in;
         }
 
         /* Main Content Section */
@@ -69,8 +67,7 @@
             margin-bottom: 1rem;
             color: #0056a3;
             border-bottom: 3px solid #0078d7;
-            display: inline-block;
-            padding-bottom: 0.4rem;
+            padding-bottom: 0.5rem;
         }
 
         .section {
@@ -81,15 +78,14 @@
             font-size: 1.8rem;
             color: #0078d7;
             margin-bottom: 1rem;
-            text-decoration: underline;
         }
 
         .sub-section {
-            margin-top: 1.5rem;
             padding: 1rem;
             background: #f9f9f9;
             border-radius: 10px;
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 1rem;
         }
 
         .sub-section h4 {
@@ -104,44 +100,41 @@
         }
 
         ul li {
-            margin: 1.2rem 0;
+            margin: 1rem 0;
         }
 
         ul li a {
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: bold;
-            display: inline-block;
             background: linear-gradient(135deg, #0078d7, #0056a3);
             color: white;
             padding: 0.8rem 1.5rem;
             border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            display: inline-block;
             transition: all 0.3s ease;
         }
 
         ul li a:hover {
             background: linear-gradient(135deg, #0056a3, #003a6f);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
         }
 
         .youtube-link {
-            display: block;
             margin-top: 2rem;
             padding: 1.5rem;
             background: linear-gradient(135deg, #0078d7, #0056a3);
             border-radius: 10px;
             text-align: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-            animation: pulse 2s infinite;
+            color: white;
+            animation: glow 3s infinite alternate;
         }
 
         .youtube-link a {
             text-decoration: none;
-            color: white;
             font-size: 1.2rem;
             font-weight: bold;
+            color: white;
             background: #003a6f;
             padding: 0.8rem 1.5rem;
             border-radius: 8px;
@@ -152,37 +145,14 @@
             background: #001f3f;
         }
 
-        /* Book Animation */
-        .animated-book {
-            display: inline-block;
-            margin: 1rem 0;
-            position: relative;
-            width: 100px;
-            height: 130px;
-            background: #0078d7;
-            border-radius: 5px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transform: rotateY(0deg);
-            animation: flipBook 3s infinite;
-        }
-
-        @keyframes flipBook {
-            0%, 100% {
-                transform: rotateY(0deg);
-            }
-            50% {
-                transform: rotateY(180deg);
-            }
-        }
-
         /* Footer Section */
         footer {
             text-align: center;
             padding: 1.5rem;
-            margin-top: 3rem;
-            background-color: #003a6f;
+            background: #003a6f;
             color: white;
             font-size: 0.95rem;
+            margin-top: 3rem;
             border-top: 3px solid #0078d7;
         }
 
@@ -197,6 +167,46 @@
             text-decoration: underline;
         }
 
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px #0078d7;
+            }
+            to {
+                box-shadow: 0 0 20px #0056a3;
+            }
+        }
     </style>
 </head>
 <body>
@@ -207,7 +217,6 @@
     </header>
     <main>
         <h2>Available Notes</h2>
-        <!-- DSP Section -->
         <div class="section">
             <h3>Digital Signal Processing (DSP)</h3>
             <div class="sub-section">
@@ -217,18 +226,13 @@
                 </ul>
                 <div class="youtube-link">
                     <h4>Learn More:</h4>
-                    <div class="animated-book"></div>
-                    <p style="color: white;">Explore detailed explanations and concepts for DSP IIR Filters by watching this lecture:</p>
-                    <a href="https://youtu.be/bDId0WQTbkc?si=TVjDrVQsmeX_tby_" target="_blank">Watch on YouTube</a>
+                    <p>Watch in-depth explanations:</p>
+                    <a href="https://youtu.be/bDId0WQTbkc" target="_blank">Watch on YouTube</a>
                 </div>
             </div>
         </div>
-        <!-- Communication Section -->
         <div class="section">
-            <h3>CMOS NOTES UPLOADING SOON</h3>
-            <ul>
-                <li><a href="COMS Basics.pdf" download>Introduction to COMS</a></li>
-            </ul>
+            <h3>CMOS Notes (Coming Soon)</h3>
         </div>
     </main>
     <footer>
