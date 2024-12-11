@@ -14,52 +14,30 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f4f4f9, #eaeaea);
+            background-color: #f4f4f9;
             color: #333;
             line-height: 1.6;
-            animation: fadeIn 1.5s ease-in-out;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes hoverPop {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
-            }
         }
 
         /* Header Section */
         header {
-            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            background: linear-gradient(135deg, #0078d7, #0056a3);
             color: white;
             text-align: center;
             padding: 3rem 1rem;
-            border-bottom: 5px solid #e63963;
+            border-bottom: 5px solid #003a6f;
+            position: relative;
         }
 
         header h1 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
             font-weight: bold;
-            text-shadow: 2px 2px #e63963;
         }
 
         header p {
             font-size: 1.3rem;
+            opacity: 0.9;
             margin-bottom: 1rem;
         }
 
@@ -67,26 +45,26 @@
             margin-top: 1rem;
             font-style: italic;
             font-size: 1.2rem;
-            opacity: 0.9;
+            opacity: 0.8;
         }
 
         /* Main Content Section */
         main {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 3rem auto;
             background: white;
-            padding: 3rem;
-            border-radius: 15px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         }
 
         main h2 {
-            font-size: 2.2rem;
-            margin-bottom: 1.5rem;
-            color: #e63963;
-            border-bottom: 3px solid #ff7eb3;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #0056a3;
+            border-bottom: 3px solid #0078d7;
             display: inline-block;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.4rem;
         }
 
         .section {
@@ -138,7 +116,8 @@
 
         ul li a:hover {
             background: linear-gradient(135deg, #0056a3, #003a6f);
-            animation: hoverPop 0.3s ease-in-out;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .youtube-link {
@@ -171,10 +150,10 @@
             text-align: center;
             padding: 1.5rem;
             margin-top: 3rem;
-            background: linear-gradient(135deg, #003a6f, #002140);
+            background-color: #003a6f;
             color: white;
             font-size: 0.95rem;
-            border-top: 3px solid #0056a3;
+            border-top: 3px solid #0078d7;
         }
 
         footer a {
@@ -187,14 +166,13 @@
             color: white;
             text-decoration: underline;
         }
-
     </style>
 </head>
 <body>
     <header>
         <h1>SIGNAL-SPARK</h1>
         <p>Your Gateway to Knowledge and Growth</p>
-        <p class="quote">"Knowledge is power. Share it, grow with it, and change the world."</p>
+        <p class="quote">"Dream big, work hard, stay focused, and surround yourself with good people."</p>
     </header>
     <main>
         <h2>Available Notes</h2>
@@ -224,5 +202,6 @@
     <footer>
         &copy; 2024 SIGNAL-SPARK. Designed with ❤️ by <a href="#">YOU NEVER KNOW</a>.
     </footer>
-</body>
-</html>
+</body
+::contentReference[oaicite:0]{index=0}
+ 
